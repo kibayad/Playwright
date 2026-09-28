@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Playwright
 node_modules/
@@ -6,3 +7,11 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+=======
+*
+!.gitignore
+!TS/
+!TS/**
+!tests/
+!tests/**
+>>>>>>> d793f646ca04115811480c77da690b895631f312
