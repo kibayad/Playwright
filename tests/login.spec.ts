@@ -5,5 +5,5 @@ test ("Login Validation", async function({page}){
   await page.locator('#username').fill('student')
   await page.locator('#password').fill('Password123')
   await page.locator('#submit').click()
-  expect(page)
+  expect(page.locator("h1.post-title")).toBeVisible()
 })
