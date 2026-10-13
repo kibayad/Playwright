@@ -25,4 +25,8 @@ test("Browser Fixture" ,async ({browser})=>{
 })
 test("Page Fixture", async({page})=>{
     
+<<<<<<< HEAD
 })
+=======
+})
+>>>>>>> d96e18c (login validation test cases)
