@@ -1,3 +1,6 @@
+// https://testautomationpractice.blogspot.com/p/playwrightpractice.html
+//https://practicetestautomation.com/practice-test
+//https://demoqa.com/
 // Locators - To identify the Elemnets on the web page
 //1. CSS Seletctor
 //2. xpath
@@ -59,8 +62,25 @@
                 //tagName(@attribute='value')//folowing-sibling::tagName or tagname[index]- one sibiling to another sibiling
                 //tagName(@attribute='value')//preceding-sibling::tagName or tagName[index] - going to previous sibling
                 //tagName(@attribute='value')//parent or ancestor::*tagName    - using parent/ancestors
-                
-
+                //tagname[text()='value']  - using text value b/w tags
+                //tagName[contains(text(),'value')]  - using some portion of the text value
+    
+    2. getBy Locators - playwright
+        1.page.getByRole()
+            -find the element based on its AIRA Role, and optionally, its accessible name.
+            -Common roles include button, textbox, link, checkbox, heading, radio, and combobox
+        2.page.getByText()
+            -find the element by usng text value
+        3.page.getByPlaceholder()
+            -find the elemement by using placeholder
+        4.page.getByTestId()
+            -find the element by using data-testId
+        5.page.getByAltText()
+            -find the element by using "alt" (image) element 
+        6.Page.getByTitle()
+            -find the elements using the HTML "title" attribute
+        7.page.getByLabel()
+            -find the elements using "label"
 
         
 */
