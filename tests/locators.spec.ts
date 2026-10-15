@@ -66,7 +66,8 @@
                 //tagName[contains(text(),'value')]  - using some portion of the text value
     
     2. getBy Locators - playwright
-        1.page.getByRole()
+        any element develop to using h1 to h6 tag, will be know as heading element    
+    1.page.getByRole()
             -find the element based on its AIRA Role, and optionally, its accessible name.
             -Common roles include button, textbox, link, checkbox, heading, radio, and combobox
         2.page.getByText()
@@ -82,5 +83,6 @@
         7.page.getByLabel()
             -find the elements using "label"
 
+    codegen - Record and playbak tool - npx playwright code "url"
         
 */
