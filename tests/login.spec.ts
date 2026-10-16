@@ -9,6 +9,7 @@ test.describe('Login validation', ()=>{
     await page.locator('#username').fill('student')
     await expect(page.locator('#username')).toHaveValue('student')
     await page.locator('#password').fill('Password123')
+    await expect(page.locator('#password')).toHaveValue('Password123')
     await page.locator('#submit').click()
     expect(page.locator("h1.post-title")).toBeVisible()
   })
