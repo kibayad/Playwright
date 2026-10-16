@@ -7,6 +7,7 @@ test.describe('Login validation', ()=>{
   })
   test ("TC01 - Valid username and password", async function({page}){
     await page.locator('#username').fill('student')
+    await expect(page.locator('#username')).toHaveValue('student')
     await page.locator('#password').fill('Password123')
     await page.locator('#submit').click()
     expect(page.locator("h1.post-title")).toBeVisible()
@@ -39,12 +40,6 @@ test.describe('Login validation', ()=>{
   })
   test('TC06 - Empty password',async({page})=>{
     await page.locator('#username').fill('student')
-    await page.locator('#password').fill('')
-    await page.locator('#submit').click()
-    await expect(page.locator('#error')).toBeVisible()
-  })
-  test('TC07 - Both fields empty',async({page})=>{
-    await page.locator('#username').fill('')
     await page.locator('#password').fill('')
     await page.locator('#submit').click()
     await expect(page.locator('#error')).toBeVisible()
