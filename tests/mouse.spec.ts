@@ -4,7 +4,7 @@
     3. Double clicking    - dblclick()
     4. Scrolling          - scrollIntoViewIfNeeded()
     5. Mosue Hover        - hover()
-    6. Drag and Drop      - dragto()  or SourceLocator.dragto()
+    6. Drag and Drop      - dragto() or SourceLocator.dragto(targetLocator)
 */
 //https://demo.guru99.com/test/simple_context_menu.html
 import {test, expect} from"@playwright/test"
@@ -35,4 +35,20 @@ test("Mouse hover", async({page})=>{
     await page.goto("https://www.spicejet.com/")
     await page.getByText("Travel Policies", {exact : true}).hover()
     await expect (page.getByTestId("test-id-Passenger Rights")).toBeVisible()
+})
+test("Drag and Drop", async ({page})=>{
+    await page.goto("https://testautomationpractice.blogspot.com")
+    const srcElmnt = page.locator("div#draggable")
+    const tarElmnt = page.locator("div#droppable")
+
+    // Sourcelocator.dragto(Target Locator)
+    //await srcElmnt.dragTo(tarElmnt)
+   // await expect (page.locator("div#droppable p")).toHaveText("Dropped!")
+
+    //manually add the mouse control
+    await srcElmnt.hover()
+    await page.mouse.down()
+    await tarElmnt.hover()
+    await page.mouse.up()
+    await expect (page.locator("div#droppable p")).toHaveText("Dropped!")
 })
